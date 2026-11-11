@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Prueba_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 538b3e8eb9e4c1341aa6d0eb4dd17f17, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 4718440071153582083
+  m_TableData:
+  - m_Id: 2948291268608
+    m_Localized: nombre jugador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2974094626816
+    m_Localized: nombre sala
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3007674224640
+    m_Localized: unir sala
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3031917301760
+    m_Localized: crear sala
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3128906387456
+    m_Localized: introducir nombre jugador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3192517201920
+    m_Localized: introducir nombre sala
+    m_Metadata:
+      m_Items: []
+  - m_Id: 348566092156928
+    m_Localized: empezar juego
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349316696412160
+    m_Localized: "El juego est\xE1 listo para empezar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375456140005376
+    m_Localized: "selecciona la respuesta correcta\nEl juego comenzar\xE1 pronto"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375925004472320
+    m_Localized: comenzar nuevo juego
+    m_Metadata:
+      m_Items: []
+  - m_Id: 376091023413248
+    m_Localized: Salir de la sesion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 376230068785152
+    m_Localized: puntos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387866368315392
+    m_Localized: "\xBFA cuantos grados hierve el agua?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 389701741219840
+    m_Localized: 'Pregunta: {TriviaManager.QuestionsAsked} /  {TriviaManager.maxQuestions}'
+    m_Metadata:
+      m_Items:
+      - rid: 4718440071153582083
+  references:
+    version: 2
+    RefIds:
+    - rid: 4718440071153582083
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0090da816e620100
