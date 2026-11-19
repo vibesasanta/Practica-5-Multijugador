@@ -22,7 +22,7 @@ public class GestorPersistencia : MonoBehaviour
     {
         try
         {
-            // 1. Inicializar servicios de Unity Cloud
+            // Inicializar servicios de Unity Cloud
             await UnityServices.InitializeAsync();
             textoEstado.text = "Servicios de Unity iniciados. Inicia sesión o regístrate.";
         }
@@ -32,7 +32,9 @@ public class GestorPersistencia : MonoBehaviour
         }
     }
 
-    // --- REGISTRO DE USUARIO ---
+    /// <summary>
+    /// Metodo para registrar al usuario
+    /// </summary>
     public async void RegistrarUsuario()
     {
         string user = inputUsuario.text.Trim();
@@ -46,7 +48,6 @@ public class GestorPersistencia : MonoBehaviour
 
         try
         {
-            // Nota: Unity exige contraseña de al menos 8 caracteres, 1 mayúscula, 1 minúscula, 1 número y 1 símbolo
             await AuthenticationService.Instance.SignUpWithUsernamePasswordAsync(user, pass);
             textoEstado.text = $"Usuario '{user}' registrado. ID: {AuthenticationService.Instance.PlayerId}";
 
@@ -66,7 +67,9 @@ public class GestorPersistencia : MonoBehaviour
         }
     }
 
-    // --- INICIO DE SESIÓN (LOGIN) ---
+    /// <summary>
+    /// Metodo para iniciar la sesion
+    /// </summary>
     public async void IniciarSesion()
     {
         string user = inputUsuario.text.Trim();
@@ -77,7 +80,7 @@ public class GestorPersistencia : MonoBehaviour
             await AuthenticationService.Instance.SignInWithUsernamePasswordAsync(user, pass);
             textoEstado.text = $"Sesión iniciada como '{user}'. Cargando datos...";
 
-            // Al entrar, recuperamos inmediatamente sus datos de la nube
+            // Al entrar, pillamos sus datos de la nube
             await CargarDatosNube();
         }
         catch (AuthenticationException ex)
@@ -90,7 +93,9 @@ public class GestorPersistencia : MonoBehaviour
         }
     }
 
-    // --- MODIFICAR Y GUARDAR DATOS ---
+    /// <summary>
+    /// Metodo para cambiar la puntuacion y guardarla
+    /// </summary>
     public async void SumarPuntosYGuardar()
     {
         if (!AuthenticationService.Instance.IsSignedIn)
@@ -125,7 +130,6 @@ public class GestorPersistencia : MonoBehaviour
         }
     }
 
-    // --- CARGAR DATOS ---
     private async System.Threading.Tasks.Task CargarDatosNube()
     {
         try
